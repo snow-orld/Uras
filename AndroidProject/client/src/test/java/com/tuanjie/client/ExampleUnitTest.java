@@ -1,4 +1,4 @@
-package com.tuanjie.main;
+package com.tuanjie.client;
 
 import org.junit.Test;
 

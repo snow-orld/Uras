@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.tuanjie.main"
-    compileSdk = 35
+    namespace = "com.tuanjie.client"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.tuanjie.main"
-        minSdk = 34
-        targetSdk = 35
+        applicationId = "com.tuanjie.client"
+        minSdk = 31
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -29,12 +29,18 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        aidl = true
+    }
 }
 
 dependencies {
 
+    implementation(project(":renderServiceLibrary"))
     implementation(libs.appcompat)
     implementation(libs.material)
+    implementation(libs.activity)
+    implementation(libs.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

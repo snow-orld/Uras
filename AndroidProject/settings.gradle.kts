@@ -20,5 +20,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "UrasInterProcessProject"
-include(":app")
- 
+include(":client")
+include(":renderServiceLibrary")
+project(":renderServiceLibrary").projectDir = File(rootDir, "unityexport/renderServiceLibrary/")
