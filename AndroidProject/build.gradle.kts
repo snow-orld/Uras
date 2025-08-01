@@ -1,4 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    alias(libs.plugins.android.application) apply false
+    // If you are changing the Android Gradle Plugin version, make sure it is compatible with the Gradle version preinstalled with Tuanjie
+    // See which Gradle version is preinstalled with Tuanjie here https://docs.unity.cn/cn/2022.3/Manual/android-gradle-overview.html
+    // See official Gradle and Android Gradle Plugin compatibility table here https://developer.android.com/studio/releases/gradle-plugin#updating-gradle
+    // To specify a custom Gradle version in Tuanjie, go do "Preferences > External Tools", uncheck "Gradle Installed with Tuanjie (recommended)" and specify a path to a custom Gradle version
+    id("com.android.application") version "7.4.2" apply false
+    id("com.android.library") version "7.4.2" apply false
 }

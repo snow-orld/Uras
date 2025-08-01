@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.tuanjie.client"
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.tuanjie.client"
         minSdk = 31
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
