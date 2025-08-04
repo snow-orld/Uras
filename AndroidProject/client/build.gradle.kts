@@ -32,6 +32,12 @@ android {
     buildFeatures {
         aidl = true
     }
+
+    aaptOptions {
+        noCompress += arrayOf(".tj3d", ".ress", ".resource", ".obb", ".bundle", ".tuanjieexp", "global-metadata.so")
+//        noCompress += tuanjieStreamingAssets.tokenize(", ")
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }
 }
 
 dependencies {
