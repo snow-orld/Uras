@@ -33,7 +33,7 @@ public class RenderService {
             }
 
             @Override
-            public void onServiceStartRenderView(int viewHashCode) {
+            public void onServiceStartRenderView(int viewHashCode, int displayIndex) {
                 Log.i(TAG, "[onServiceStartRenderView] " + viewHashCode);
             }
 
@@ -48,8 +48,13 @@ public class RenderService {
             }
 
             @Override
-            public void onDisplayRegisteredByOther(int viewHasCode, int displayIndex) {
-                Log.i(TAG, "[onDisplayRegisteredByOther]");
+            public void onDisplayRegisteredByOther(int oldViewHashCode, int displayIndex, String newViewPkgName, int newViewHashCode) {
+
+            }
+
+            @Override
+            public void onServicePausedOrResumed(String sourcePkgName, boolean isPaused) {
+
             }
         });
     }
